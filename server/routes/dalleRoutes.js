@@ -7,7 +7,7 @@ dotenv.config();
 const router = express.Router();
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 })
 
 const openai = new OpenAIApi(configuration);
@@ -24,13 +24,11 @@ router.route('/').post(async (req, res) => {
       prompt,
       n: 2,
       size: "1024x1024",
-      response_format: "url",
     });
-    
-    const image = aiResponse.data.data[0].image;
-    res.status(200).json({photo: image})
+
+    return res.status(200).json({image: aiResponse.data.data[0].url})
   } catch(error) {
-    console.log(error);
+    console.log(error.message);
     res.status(500).send(error?.response.data.error.message)
   }
 })

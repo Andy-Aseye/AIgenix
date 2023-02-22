@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 * {
     font-family: 'Inter', sans-serif;
 }
+
+/* #hero-text{
+/* font-family:  'Gloock', serif; 
+} */
 
 @media screen and (min-width: 480px) {
     .card:nth-child(7n + 1) {
@@ -12,6 +21,7 @@
         grid-row: auto/span 2;
     }
 }
+
 
 .prompt::-webkit-scrollbar {
     width: 5px;
@@ -21,3 +31,4 @@
   background-color: #666e75;
   border-radius: 5px;
 }
+
